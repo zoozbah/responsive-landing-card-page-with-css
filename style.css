@@ -1,84 +1,172 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Outfit:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Nunito+Sans:wght@200&display=swap');
 *{
-    padding:0;
     margin:0;
-
+    padding:0;
     box-sizing: border-box;
-  
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Fraunces', serif;
+}
+
+:root{
+    --GREEN: hsl(158, 36%, 37%);
+    --WHITE: hsl(0, 0%, 100%);
 }
 body{
-    background-color: hsl(212, 45%, 89%);
-    font-size: 15px;
-    font-weight: bold;
-}
-
-article{
-    display:grid;
+    background-color: hsl(30, 38%, 92%);
     min-height: 100vh;
-  
-    
-    
-}
-.card{
-    
-    align-items: center;
-    height:25rem;
-    width: 15rem;
-    background-color: hsl(0, 0%, 100%);
-    place-self: center;
-
-
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-.content{
-    align-items: center;
-    text-align:center;
-    margin:7px;
-    padding:10px;
-
-
-}
-img{
-    margin:12px;
-    width:90%;
-    border-radius: 5px;
-}
-
-/*
-p,h1{
-    margin:0;   text-align: center;
-    background-color: hsl(0, 0%, 100%);
-    flex-wrap: nowrap;
-}*/
-p{
-   color: hsl(220, 15%, 55%);
-   font-family: 'Nunito Sans', sans-serif;
-   margin-top: 10px;
-   padding-top: 5px;
-   text-indent: -1em;
-
-}
-h3{
-   margin:0px;
-    color: hsl(218, 44%, 22%);
-    
-
-
-
-}
-
-
-@media screen and(max-width: 1440px) and (max-width: 700px) {
- .card{
     display: flex;
- }
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:350px;
+    width:1000px;
+    flex-wrap: wrap;
+
+ 
+    
+
+
+}
+.container .card{
+    position:relative;
+    max-width: 470px;
+    background-color: hsl(0, 0%, 100%);
+    margin: 10px;
+    padding: 0px;
+    display:flex;
+    border-radius: 10px;
+
 }
 
+.container .card .mg{
 
+   max-width: 150px;
+   flex: 0 0 150px;
+   position: relative;
+   display:flex;
+}
+.container .card .mg img{
+    max-width:150%;
+    border-radius: 10px 0px 0px 10px;
 
+}
+.container .card .content{
+    margin-left: 88px;
+    margin-top: 5px;
+    margin-right:2px;
+    padding:10px;
+    
+    
+   
+}
+.container .card .content p{
+   text-align:left;
+   padding:10px;
+   font-family: 'Nunito Sans', sans-serif;
+;
+
+  
+   
+}
+.container .card .content .desc{
+    letter-spacing: 3px;
+
+}
+.container .card .content h1{
+    line-height: 1;
+    font-weight: bolder;
+    padding:3px;
+
+}
+
+.container .card .content h1{
+    line-height: 1;
+    font-weight: bolder;
+
+}
+span{
+    color:var(--GREEN);
+ 
+}
+
+sup{
+    text-decoration: line-through;
+  
+    font-weight: 5;
+    font-size: small;
+
+}
+button{
+    background-color: var(--GREEN);
+    border-radius: 5px;
+    border-style: hidden;
+    height: 30px;
+    width:200px;
+    color:var(--WHITE);
+    display:flex;
+    justify-content:center;
+    justify-items: center;
+    padding: 5px;
+   
+    
+} 
+
+.material-symbols-outlined{
+    color: var(--WHITE);
+}
+
+@media (max-width:991px)
+{
+    .container
+    {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:768px)
+{
+    .container
+    {
+        flex-direction: column;
+    }
+    .container .card
+    {
+        flex-direction: column;
+        max-width: 350px;
+    }
+    .container .card .mg{
+        
+        content: url(images/image-product-mobile.jpg);
+        max-width: 100%;
+        border-radius: 5px 5px 0px 0px;
+    }
+    .container .card .content{
+        margin-left: 0px;
+    }
+    button{
+        background-color: var(--GREEN);
+        border-radius: 5px;
+        border-style: hidden;
+        height: 40px;
+        width:320px;
+        color:var(--WHITE);
+        display:flex;
+        justify-content:center;
+        justify-items: center;
+        padding: 6px;
+       
+        
+    } 
+    
+}
 
 
